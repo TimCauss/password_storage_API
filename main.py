@@ -5,7 +5,10 @@ app = FastAPI()
 
 
 @app.get("/")
-async def read_root():
-    return {"Hello": "World"}
+async def index() -> bool:
+    return True
 
 
+@app.get('/creds')
+async def read_creds():
+    pass
