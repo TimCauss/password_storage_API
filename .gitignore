@@ -5,3 +5,4 @@ __pycache__/models.cpython-311.pyc
 __pycache__/main.cpython-311.pyc
 Libs/__pycache__/__init__.cpython-311.pyc
 Libs/__pycache__/logger.cpython-311.pyc
+app.log
