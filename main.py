@@ -1,11 +1,13 @@
 from fastapi import FastAPI, Request
+
 from Libs.logger import Logger
+import asyncio
 import time
 import logging
 import uuid
 
 
-logger = Logger("req_logger")
+logger = Logger("req_logger", "req_logger")
 app = FastAPI()
 
 @app.middleware("http")
@@ -25,5 +27,5 @@ async def logs_requests(request: Request, call_next):
 
 @app.get("/")
 async def index() -> bool:
-    time.sleep(5)
+    await asyncio.sleep(5)
     return True
